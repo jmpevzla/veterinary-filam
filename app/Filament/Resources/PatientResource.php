@@ -17,7 +17,7 @@ class PatientResource extends Resource
 {
     protected static ?string $model = Patient::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-identification';
 
     protected static ?array $type_options = [
         'cat' => 'Cat',
@@ -75,7 +75,7 @@ class PatientResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('type'),
                 Tables\Columns\TextColumn::make('date_of_birth')
-                    ->dateTime('m.d.Y')
+                    ->dateTime('M d, Y')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('owner.name')
                     ->searchable(),
